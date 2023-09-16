@@ -17,8 +17,6 @@ We would like to see your own implementation of a web crawler. Please do not use
 * I'm only handling 301 and 302 redirects at the moment.
 * I don't consider any sites potential throttling or rate limiting, and just slam requests away. There is a default deadline per worker task of 5 seconds however.
 
-
-
 ## Solution
 
 ### Tools
@@ -31,6 +29,7 @@ We would like to see your own implementation of a web crawler. Please do not use
 * If I wanted to add a sitemap output, I could generate a tree structure with the initial link provided as the root node.
 * There's an issue with the concurrent hash map implementation that causes some kind of address fault. This only seems to happen with a large amount of workers (100+).
 * Test suite is quite bare and I'm not reporting coverage. Ideally would add this and get the coverage >80%, but stopped where I got to simply due to time.
+* Improved logging, adding telemetry, CI, etc and all those things required to properly productionise an application would be very nice.
 
 ### Libraries
 * `golang.org/x/net/html` - HTML parsing
